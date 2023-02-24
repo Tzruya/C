@@ -77,3 +77,23 @@ void pol1(int num, int size)
 	for (i = 0; i < size; i++)
 		printf("%d ", arr[i]);
 }
+//  פיתרון שאלה 2
+int pol(int num,int size)
+{
+	int i,divide = 1;
+	int ans=0;
+	for (i = 0; i <(size-1); i++)
+		divide = divide * 10;
+	for (i = 0; i <size/2; i++)
+	{
+		if ((num / divide) == (num % 10))
+			ans = 1;
+		else
+			return 0;
+		num = num / 10;
+		divide = divide / 10;
+		num = num % (divide);
+		divide = divide / 10;
+	}
+	return ans;
+}
