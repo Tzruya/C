@@ -97,3 +97,28 @@ int pol(int num,int size)
 	}
 	return ans;
 }
+// פתרון שאלה 3
+void func(int vec[20])
+{
+	int i,sum,countCouple=0,countOdd=0,maxThreeEven=0;
+	for (i = 0; i < 20; i++)
+	{
+		if (vec[i] > 99 && vec[i] < 1000)
+		{
+			sum = ((vec[i] % 10) + (vec[i] / 100) + (vec[i] / 10) % 10);
+			printf("%d\n", sum);
+			if ((vec[i] % 2 == 0) && (vec[i] > maxThreeEven))
+				maxThreeEven = vec[i];
+		}
+		if (vec[i] > 9 && vec[i] < 100)
+		{
+			countCouple++;
+		}
+		if (vec[i] % 2 == 1)
+			countOdd++;
+
+	}
+	printf("%d\n", countCouple);
+	printf("%d\n", countOdd);
+	printf("%d", maxThreeEven);
+}
