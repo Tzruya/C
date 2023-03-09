@@ -5,7 +5,6 @@
 * אם הספרה גדולה מ-5 היא תוכפל ב-2 והשארית שלה מ-10 תוכנס לקידמת המספר
 * אם הספרה שווה ל-5 היא תהיה תהפוך ל-0 ותוכנס לקידמת המספר
 */
-//question3
 int func(int num)
 {
 	int temp, res = 0;
@@ -28,6 +27,7 @@ int main()
 	num = 756;
 	num = func(num);
 	printf("num=%d\n", num);
+//question3
 /*
 *  כיתבו פונקציה שמקבלת מערך הבודקת 3 תנאים
 *  -כל המספרים במערך חיוביים
@@ -43,11 +43,11 @@ int func(int vec[10])
 	int i,ans;
 	int sum1 = 0, sum2 = 0;
 	int arr1 = vec[0],count =0;
-	for (i = 0; i < 10; i++)
+	for (i = 0; i <sizeof(vec)/2; i++)
 	{
 		sum1 = sum1 + vec[i];
 		sum2 = sum2 + vec[9 - i];
-		if (vec[i] >= 0)
+		if (vec[i] >= 0)&&(vec(9-i>=0))
 			ans = 1;
 		else
 			return 0;
